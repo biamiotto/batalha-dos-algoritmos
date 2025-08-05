@@ -208,10 +208,3 @@ console.log(`Do lado de fora, em segurança, os animaizinhos correm livres. Stev
 A raposa mágica se aproxima de Star, toca seu colar com o focinho e se transforma em uma chama dourada,
 fundindo sua essência á dela.
 Star sente que algo dentro de si mudou. Sua conexão com a magia e com os animais estava mais forte do que nunca.`);
-
-
-
-
-
-
-
