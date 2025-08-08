@@ -222,3 +222,130 @@ Defesa: ${defesaTotal}
 Combates Vencidos: ${combatesVencidos}
 Dano da Base: ${DANOBASE}
 Defesa da Base: ${DEFESABASE}`);
+
+// Continuação da Saga Épica - NÍVEL 3
+
+// Dados da personagem vindos dos níveis anteriores:
+console.log(``);
+console.log(`Continuação da Saga Épica - NÍVEL 3`);
+console.log(`
+Nome: ${nome}
+Idade: ${idade}
+Classe: ${classe}
+Nível: ${nivel}
+Vida: ${vida}
+Ouro: ${ouro}
+XP: ${xp}
+Combates Vencidos: ${combatesVencidos}`);
+
+// Novos elementos para o castelo dos arrays
+let inventario = ["🏹 Arco Celestial", "🌑 Capa da Lua", "🍵 Poção Suprema de Vida", "🔮 Cristal da Raposa"];
+let aliados = ["Steve", "Raposa Mágica", "Guerreira Lunar", "Mago Zeus"];
+let inimigosEncontrados = ["Demogorgon", "Guardião do Código", "Dragão do Mundo Invertido"];
+let salasCastelo = ["Salão dos Espelhos", "Biblioteca do Infinito", "Trono de Dados"];
+let tesouroColetado = [];
+
+console.log(``);
+console.log(`🏰 ${nome} adentra o Castelo dos Arrays`);
+console.log(`Após libertar a raposa mágica e sobreviver á Batalha dos Algoritmos, Star Shine chega diante
+do castelo lendário.`);
+console.log(`O portão se abre com um rugido metálico, revelando corredores que brilham como circuitos vivos.`);
+console.log(`Inventário Inicial: ` + inventario.length + ` itens mágicos`);
+console.log(`Aliados ao seu lado: ` + aliados.join(`, `));
+
+// CAPÍTULO 1: DESCOBERTA DAS COLEÇÕES ARCANAS
+let pocoesEncontradas = ["Vida da Lua", "Invisibilidade Celestial", "Escudo Estelar"];
+let armadilhasAtiradas = [];
+
+console.log(``);
+console.log(`💥 CAPÍTULO 1: Os Baús Arcanos do Castelo`);
+console.log(`🧪 Primeira poção encontrada: ` + pocoesEncontradas[0]);
+console.log(`Total de poções mágicas: ` + pocoesEncontradas.length);
+
+// Upgrade de item
+inventario[2] = "Poção Suprema Estelar";
+console.log(`✨ ${nome} aprimorou uma poção antiga em algo ainda mais poderoso!`);
+
+// Adiciona e remove itens
+inventario.push(`Anel de Proteção Galáctica`);
+console.log(`💍 Novo item adicionado! Inventário ${inventario}`);
+let itemRemovido = inventario.pop();
+console.log(`Item removido: ${itemRemovido}`);
+console.log(`Inventário atual: ${inventario}`);
+
+console.log(`Enquanto examinava os baús arcanos, Star Shine sentiu o chão tremer levemente.`);
+console.log(`Um som metálico ecoou pelos corredores, como engrenagens gigantes despertando após séculos.`);
+console.log(`A Raposa Mágica ergueu as orelhas, como se quisesse dizer que não estávamos sozinhos ali...`);
+console.log(`Um feixe de luz dourada atravessou a sala, projetando símbolos estranhos nas paredes, como se o castelo 
+estivesse tentando se comunicar.`);
+
+// Capítulo 2: A SALA DOS ESPELHOS
+console.log(``);
+console.log(`🔎 CAPÍTULO 2: O salão dos Espelhos`);
+console.log(`Guiados pela luz dourada, Star Shine e seus aliados chegam a uma imensa sala repleta de espelhos antigos.`);
+console.log(`Cada espelho reflete não apenas a aparência, mas também os medos e segredos mais profundos de quem o encara.`);
+console.log(`Steve se aproxima de um deles, e vê uma versão sombria de si mesmo, segurando uma espada quebrada.`);
+console.log(`A Guerreira Lunar alerta: 
+- Cuidado! Alguns reflexos podem ganhar vida própria.`);
+console.log(`Dois reflexos distorcidos comçam a se mover sozinhos, atravessando a superfície de vidro e assumindo forma física`);
+
+// Inimigos de batalha 
+let inimigosBatalha = ["Reflexo Sombrio de Steve", " Reflexo Sombrio de Guerreira Lunar"];
+let danoRecebido = [];
+
+console.log(`💀 ${nome} enfrenta ${inimigosBatalha}!`);
+
+for (let i = 0; i < inimigosBatalha.length; i++) {
+    let dano = Math.floor(Math.random() * 25) + 15;
+    console.log(`🥊 Rodada ${i + 1} - ${inimigosBatalha[i]} recebe ${dano} de dano.`);
+    danoRecebido.push(dano);
+    if (i == 0) xp+= 30;
+    else vida -= 20;
+}
+
+console.log(``);
+console.log(`Vida atual: ${vida}`);
+console.log(`XP: ${xp}`);
+
+// CAPÍTULO 3: Explorando as Masmorras
+console.log(``);
+console.log(`🎩 CAPÍTULO 3: Explorando as Masmorras`);
+console.log(`${nome} explora as ${salasCastelo.length} salas do castelo:`);
+
+for (let i = 0; i < salasCastelo.length; i++) {
+    console.log(`🚪 Sala ${i + 1}: ${salasCastelo[i]}`);
+    if (i == 0) {
+        xp += 50;
+        inventario.push(`Pergaminho do Conhecimento`);
+    } else if (i == 1) {
+        tesouroColetado.push(`Cristal Protetor`);
+    } else {
+        vida -= 15;
+    }
+}
+
+console.log(`Exploração finalizada! 
+XP: ${xp}`);
+console.log(`Vida: ${vida}`);
+
+// CAPÍTULO 4: União dos Aliados
+console.log(``);
+console.log(`👥 CAPÍTULO 4: União dos Aliados`);
+console.log(`${nome} convoca seus aliados para a batalha final!`);
+
+for (let i = 0; i < aliados.length; i++) {
+    let aliado = aliados[i];
+    console.log(`Aliado ${i + 1}: ${aliado} pronto para a missão.`);
+    if (i == 0) ouro += 70;
+    else if (i == 1) {
+        vida += 40;   
+    } else if (i == 2) defesa += 35;
+    else xp += 60;
+}
+
+console.log(`🥇 Preparados! 
+Ouro: ${ouro}
+Vida: ${vida}
+Defesa: ${defesa}
+XP: ${xp}`);
+
