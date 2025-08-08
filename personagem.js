@@ -107,8 +107,7 @@ mas nenhum sinal sequer de chuva, indicando que algo extraordinário estava por 
 ${nome} percebe que não estava em um mundo real, mas sim no mundo invertido, que seria um "clone" do mundo real, 
 porém com coisas irreais acontecendo nele.
 Seu amigo ${amigoDeStar} que também estava no mundo invertido, percebe um barulho estranho e alto vindo de trás algumas árvores, 
-então, ele se aproxima para ver o que acontecia ali, até que ele enxerga uma sombra enorme vinda de trás das árvores e decide 
-chamar sua amiga Star, pois estava com medo.
+então, ele se aproxima para ver o que acontecia ali, até que ele enxerga uma sombra enorme vinda de trás das árvores e decide chamar sua amiga Star, pois estava com medo.
 Star ouve gritos, vai correndo em direção a ${amigoDeStar} e se depara com um enorme monstro...`);
 
 // Tomada de decisão baseada no nível da personagem
@@ -208,3 +207,18 @@ console.log(`Do lado de fora, em segurança, os animaizinhos correm livres. Stev
 A raposa mágica se aproxima de Star, toca seu colar com o focinho e se transforma em uma chama dourada,
 fundindo sua essência á dela.
 Star sente que algo dentro de si mudou. Sua conexão com a magia e com os animais estava mais forte do que nunca.`);
+
+nivel++;
+combatesVencidos++;
+
+console.log(``);
+console.log(`📣 Estatísticas finais:
+Nível: ${nivel}
+Vida: ${vida}
+Ouro: ${ouro}
+XP: ${xp}
+Ataque: ${ataqueTotal}
+Defesa: ${defesaTotal}
+Combates Vencidos: ${combatesVencidos}
+Dano da Base: ${DANOBASE}
+Defesa da Base: ${DEFESABASE}`);
