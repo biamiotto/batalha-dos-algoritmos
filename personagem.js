@@ -349,3 +349,58 @@ Vida: ${vida}
 Defesa: ${defesa}
 XP: ${xp}`);
 
+// CAPÍTULO 5: Batalha Final
+console.log(``);
+console.log(`🔥 CAPÍTULO 5: Batalha Final`);
+console.log(`Batalha final contra os inimigos mais poderosos:`);
+
+let inimigosFinais = ["Demogorgon", "Guardião do Código", "Dragão do Mundo Invertido"];
+let danosInimigos = [];
+
+for (let i = 0; i < inimigosFinais.length; i++) {
+    let dano = Math.floor(Math.random() * 35) + 40;
+    console.log(`Rodada ${i + 1} - ${inimigosFinais[i]} sofre ${dano} de dano.`);
+    danosInimigos.push(dano);
+    if (i == 0) vida -= 30;
+    else if (i == 1) xp += 70;
+    else {
+        xp += 120;
+        tesouroColetado.push(`Escama Lendária`);
+    }
+}
+
+combatesVencidos++;
+nivel += 2;
+ouro += 600;
+
+console.log(`
+Vida final: ${vida}
+Tesouros coletados: ${tesouroColetado.length}`);
+
+// EPÍLOGO: O Mestre dos Arrays
+console.log(``);
+console.log(`👑 ${nome} conquistadora do castelo!`);
+
+// Estatísticas finais da jornada
+console.log(``);
+console.log(`📣 Estatísticas finais:`)
+console.log(`Nível: ${nivel}
+Vida: ${vida}
+Ouro: ${ouro}
+XP: ${xp}
+Combates Vencidos: ${combatesVencidos}
+Itens no inventário: ${inventario.length}
+Tesouros Épicos: ${tesouroColetado.length}`);
+
+console.log(``);
+console.log(`🌟 A LENDA CONTINUA...`);
+console.log(`Enquanto as luzes do castelo se apagavam, uma nova chama se acendia no coração de Star Shine.`);
+console.log(`Os ensinamentos das coleções arcanas haviam despertado um poder além da compreensão.`);
+console.log(`Em silêncio, ela prometeu proteger os segredos do castelo das forças das trevas.`);
+console.log(`Seus aliados, agora mais fortes, juraram lealdade eterna à sua causa.`);
+console.log(`No horizonte, uma nova jornada começava, com desafios ainda maiores e mistérios a desvendar.`);
+console.log(`Cada passo que dava a aproximava do domínio supremo sobre o universo dos códigos.`);
+console.log(`E assim, a lenda do Arquimago dos Algoritmos Eternos continuava a crescer, imortal e invencível.`);
+
+console.log(``);
+console.log(`🎯 FIM DO NÍVEL 3 | AGUARDE FUTURAS AVENTURAS NA ACADEMIA DOS CÓDIGOS! 🎯`);
